@@ -1,1 +1,1 @@
-Exploring Core AI Engineering principles using MNIST Dataset
+Exploring Core AI Engineering principles using MNIST Dataset 

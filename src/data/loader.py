@@ -2,7 +2,7 @@ import numpy as np
 import struct
 from pathlib import Path
 from sklearn.model_selection import train_test_split
-# funtion of this file is to load the data from the file and return it as a numpy array
+# function of this code is to load the data from the file and return it as a numpy array
 RAW_DATA_PATH = Path("data/raw")
 PROCESSED_DATA_PATH = Path("data/processed")
 def load_labels(file_path):
@@ -23,7 +23,7 @@ def load_images(file_path):
         images = images.reshape(num_images, rows * cols)
 
     return images
-def load_mnst():
+def load_mnist():
     print("Loading MNIST dataset...")
     X_train = load_images(RAW_DATA_PATH / "train-images.idx3-ubyte")
     y_train = load_labels(RAW_DATA_PATH / "train-labels.idx1-ubyte")
@@ -40,7 +40,7 @@ def validation_split(X, y, val_size=0.2, random_state=42):
 
     
 if __name__ == "__main__":
-    X_train, X_test, y_train, y_test = load_mnst()
+    X_train, X_test, y_train, y_test = load_mnist()
     print(f"X_train.shape: {X_train.shape}, y_train.shape: {y_train.shape}, X_test.shape: {X_test.shape}, y_test.shape: {y_test.shape}")
     X_train, X_val, y_train, y_val = validation_split(X_train, y_train)
     
